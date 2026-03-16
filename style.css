@@ -801,63 +801,79 @@ img {
     min-height: auto;
     padding-bottom: 0;
     flex-direction: column;
+    background: #fff;
   }
 
   .hero__inner {
-    padding: 80px 0 28px;
-    order: 1;
+    padding: 20px 0 24px;
+    order: 2;
   }
 
   .hero__bg {
     position: relative;
     width: 100%;
-    height: 240px;
+    height: 56vw;
+    min-height: 200px;
+    max-height: 280px;
     top: auto;
+    left: auto;
+    right: auto;
     bottom: auto;
-    order: 2;
+    order: 1;
+    margin-top: 56px;
+  }
+
+  .hero__bg-img {
+    object-position: center 40%;
   }
 
   .hero__bg::after {
     background: linear-gradient(
       180deg,
-      #f8faf8 0%,
-      rgba(248, 250, 248, 0) 25%,
-      rgba(248, 250, 248, 0) 75%,
-      #f8faf8 100%
+      rgba(0, 0, 0, 0.05) 0%,
+      transparent 25%,
+      transparent 70%,
+      rgba(255, 255, 255, 0.5) 90%,
+      #fff 100%
     );
   }
 
   .hero__content {
     max-width: 100%;
-    padding-bottom: 24px;
+    padding-bottom: 16px;
   }
 
   .hero__label {
-    font-size: 0.7rem;
-    margin-bottom: 12px;
-    letter-spacing: 0.2em;
+    display: none;
   }
 
   .hero__title {
-    font-size: 1.65rem;
-    margin-bottom: 16px;
-    line-height: 1.5;
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+    line-height: 1.55;
+    text-align: center;
   }
 
   .hero__lead {
-    font-size: 0.9rem;
-    margin-bottom: 24px;
+    font-size: 0.88rem;
+    margin-bottom: 20px;
     line-height: 1.8;
+    text-align: center;
   }
 
   .hero__cta-group {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
+  }
+
+  .hero__cta-group .btn--ghost {
+    display: none;
   }
 
   .hero__numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 0;
-    flex-wrap: wrap;
     border-radius: 0;
     border-left: none;
     border-right: none;
@@ -865,28 +881,30 @@ img {
     box-shadow: none;
     margin-left: -16px;
     margin-right: -16px;
+    background: #f5f8f5;
   }
 
   .hero__number-item {
-    flex: 1 1 50%;
-    padding: 20px 12px;
+    flex: none;
+    padding: 14px 4px;
   }
 
-  .hero__number-item:nth-child(2)::after {
-    display: none;
-  }
-
-  .hero__number-item:nth-child(1),
-  .hero__number-item:nth-child(2) {
-    border-bottom: 1px solid #e0e0e0;
+  .hero__number-item:not(:last-child)::after {
+    top: 25%;
+    height: 50%;
   }
 
   .hero__number-value {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .hero__number-value small {
+    font-size: 0.65rem;
   }
 
   .hero__number-label {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
+    margin-top: 4px;
   }
 
   /* --- Buttons --- */
